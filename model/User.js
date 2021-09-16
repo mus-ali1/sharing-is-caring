@@ -59,6 +59,7 @@ User.init(
         defaultValue: null,
       },
     },
+    {
     hooks: {
         // set up beforeCreate and beforeUpdate hooks to ensure password encryption
         beforeCreate: async (newUserData) => {
