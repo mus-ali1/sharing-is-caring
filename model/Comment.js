@@ -41,14 +41,13 @@ Comment.init(
             allowNull: true,
             defaultValue: null,
         },
-     {
-
+    },
+    {
         sequelize,
         tableName: "comment",
         timestamps: false,
 
     }
+);
 
-
-
-)
+module.export = Comment;
