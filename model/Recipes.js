@@ -33,7 +33,7 @@ Recipes.init({
     allowNull: true,
     defaultValue: null,
     validate: {
-      len: [4],
+      len: [2],
     },
   },
 
