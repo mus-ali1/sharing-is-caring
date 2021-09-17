@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 // Set up a config file
 const sequelize = require("../config/connection.js");
+const { tableName } = require("./User.js");
 
 // //creating columns for recipes db
 class Recipes extends Model {}
@@ -48,4 +49,10 @@ Recipes.init({
     allowNull: true,
     defaultValue: null,
   },
+
+  sequelize,
+  modelName: "recipes",
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true, //clarify the function of this key value pair
 });
