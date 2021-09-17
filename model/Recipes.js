@@ -57,3 +57,5 @@ Recipes.init({
   underscored: true, //clarify the function of this key value pair
   tableName: "recipes",
 });
+
+module.exports = Recipes;
