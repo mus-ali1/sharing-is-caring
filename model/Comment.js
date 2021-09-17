@@ -20,5 +20,18 @@ Comment.init(
                 key: "id",
             },
         },
+
+        upvote: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: null,
+        },
+
+        downvote: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: null,
+        },
+        
     
 )
