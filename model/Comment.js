@@ -21,6 +21,15 @@ Comment.init(
             },
         },
 
+        recipes_id: {
+            type: DataTypes.INTEGER,
+            references: {
+
+                model: "recipes",
+                key: "id",
+            },
+        },
+
         upvote: {
             type: DataTypes.INTEGER,
             allowNull: true,
