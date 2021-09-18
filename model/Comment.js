@@ -21,11 +21,11 @@ Comment.init(
             },
         },
 
-        recipes_id: {
+        recipe_id: {
             type: DataTypes.INTEGER,
             references: {
 
-                model: "recipes",
+                model: "recipe",
                 key: "id",
             },
         },
