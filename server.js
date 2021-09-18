@@ -8,9 +8,11 @@ const hbs = handlebars.create();
 
 const dbConnection = require("./config/connection");
 
-const routes = require("./controllers");
+//const routes = require("./controllers");
+const apiRoutes = require("./controllers/api");
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(apiRoutes);
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
