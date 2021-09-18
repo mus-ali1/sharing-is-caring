@@ -4,8 +4,8 @@ const sequelize = require("../config/connection.js");
 //const { tableName } = require("./User.js"); //this line of code was added & surprised us...why is tableName still gray & how does it link to lines 53-58
 
 // //creating columns for recipes db
-class Recipes extends Model {}
-Recipes.init({
+class Recipe extends Model { }
+Recipe.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -51,11 +51,11 @@ Recipes.init({
   },
 
   sequelize,
-  //modelName: "recipes",
+  //modelName: "recipe",
   timestamps: false,
   freezeTableName: true,
   underscored: true, //clarify the function of this key value pair
-  tableName: "recipes",
+  tableName: "recipe",
 });
 
-module.exports = Recipes;
+module.exports = Recipe;
