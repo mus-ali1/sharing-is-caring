@@ -4,7 +4,8 @@
   "description": "An application for the culinary curious. Allowing users to upload the favourite recipies from their culture. Make comments on recepies and upload images of their culinary creations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds"
   },
   "repository": {
     "type": "git",

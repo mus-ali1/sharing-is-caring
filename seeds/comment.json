@@ -2,12 +2,14 @@
     {
         "user_id": 1,
         "recipe_id": 1,
+        "comment": "this is lovely!",
         "upvote": 1,
         "downvote": 0
     },
     {
         "user_id": 2,
         "recipe_id": 2,
+        "comment": "this is absolutely terrible!!!",
         "upvote": 0,
         "downvote": 1
     }
