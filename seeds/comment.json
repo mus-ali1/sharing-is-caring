@@ -1,0 +1,14 @@
+[
+    {
+        "user_id": 1,
+        "recipe_id": "1",
+        "upvote": "1",
+        "downvote": "0"
+    },
+    {
+        "user_id": 2,
+        "recipe_id": "2",
+        "upvote": "0",
+        "downvote": "1"
+    }
+]
