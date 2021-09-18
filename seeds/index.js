@@ -16,19 +16,17 @@ const seedDatabase = async () => {
 
     console.log("Users Added");
 
+    await Recipe.bulkCreate(recipeSeeds, {
+        individualHooks: true,
+    });
+
+    console.log("recipes Added");
 
     await Comment.bulkCreate(commentSeeds, {
         individualHooks: true,
     });
 
     console.log("comments Added");
-
-
-    await Recipe.bulkCreate(recipeSeeds, {
-        individualHooks: true,
-    });
-
-    console.log("recipes Added");
 
     process.exit(0);
 };
