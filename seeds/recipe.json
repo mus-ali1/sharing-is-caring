@@ -1,17 +1,17 @@
 [
     {
-      "user_id": "Paul", 
+      "user_id": 1, 
       "recipe_name": "Carvery",
       "recipe_nationality": "United Kingdom",
-      "upvote": "1",
-      "downvote": "0"
+      "upvote": 1,
+      "downvote": 0
     },
     {
-        "user_id": "Ben", 
+        "user_id": 2, 
         "recipe_name": "Sausage and Mash",
         "recipe_nationality": "France",
-        "upvote": "0",
-        "downvote": "1"
+        "upvote": 0,
+        "downvote": 1
       }
    
   ]

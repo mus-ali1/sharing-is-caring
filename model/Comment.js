@@ -45,9 +45,11 @@ Comment.init(
     {
         sequelize,
         tableName: "comment",
+        freezeTableName: true,
+        underscored: true,
         timestamps: false,
 
     }
 );
 
-module.export = Comment;
+module.exports = Comment;
