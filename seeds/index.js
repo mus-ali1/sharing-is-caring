@@ -24,3 +24,15 @@ const seedDatabase = async () => {
     console.log("comments Added");
 
 
+    await Recipe.bulkCreate(recipeSeeds, {
+        individualHooks: true,
+    });
+
+    console.log("recipes Added");
+
+    process.exit(0);
+};
+
+seedDatabase();
+
+
