@@ -1,0 +1,33 @@
+[
+   {
+      "username": "Polly",
+      "email": "polly@gmail.com",
+      "password": "lovelyjubley123",
+      "location": "Miami",
+      "profile_picture": "image1.jpeg",
+      "bio": "This is my first food blog...I hope you like it"
+
+      
+   },
+
+   {
+      "username": "Alex",
+      "email": "Alex@gmail.com",
+      "password": "Cushty123",
+      "location": "Kingston",
+      "profile_picture": "image2.jpeg",
+      "bio": "This is my second food blog...I hope you like it"
+      
+   },
+
+   {
+      "username": "Toni",
+      "email": "toni@gmail.com",
+      "password": "up_up&away123",
+      "location": "Birmingham",
+      "profile_picture": "image3.jpeg",
+      "bio": "Not sure what all the fuss was about!!!"
+      
+   }
+
+]
