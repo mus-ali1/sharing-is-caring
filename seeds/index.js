@@ -15,3 +15,12 @@ const seedDatabase = async () => {
     });
 
     console.log("Users Added");
+
+
+    await Comment.bulkCreate(commentSeeds, {
+        individualHooks: true,
+    });
+
+    console.log("comments Added");
+
+
