@@ -2,7 +2,7 @@ const router = require("express");
 const { User } = require("../../model/User");
 
 const router = router();
-//create a new user
+//create route for a new user
 router.post("/", async (req, res) => {
   try {
     const newUser = await User.create(req.body);
@@ -17,8 +17,13 @@ router.post("/login", async(req, res) => {
       const user = await User.findOne ({
          where:{
             email: req.body.email,
-            
+
          }
-      })
+      });
+      if (!user){
+         res.status (400).json ({
+            message: "You have provided an incorrect email address and or password",
+         })
+      }
    }
 })
