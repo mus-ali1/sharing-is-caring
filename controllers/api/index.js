@@ -5,7 +5,7 @@ const userRoutes = require("./UserRoutes");
 
 //router.use("/recipe", recipeRoutes);
 //router.use("/comment", commentRoutes);
-router.use("/user", userRoutes);
+router.use("/user", authMiddleware, userRoutes);
 
 router.use("*", (req, res) => {
   res.status(404).end();
