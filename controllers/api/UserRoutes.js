@@ -21,9 +21,26 @@ router.post("/login", async(req, res) => {
          }
       });
       if (!user){
-         res.status (400).json ({
-            message: "You have provided an incorrect email address and or password",
-         })
+         res
+         .status (400)
+         .json ({message: "You have provided an incorrect email address and or password"});
+         return;
       }
+      
+      //error handling for not a valid password
+
+      const validPassword = await user.checkPassword (req.body.password);
+      
+      if (!validPassword){
+         res
+         .status(400)
+         .json ({message: "you have provided an incorrect email and or password"});
+         return;
+
+         
+      }
+
+      
    }
 })
+
