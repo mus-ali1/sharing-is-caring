@@ -27,12 +27,9 @@ router.post("/login", async (req, res) => {
       },
     });
     if (!user) {
-      res
-        .status(400)
-        .json({
-          message:
-            "You have provided an incorrect email address and or password",
-        });
+      res.status(400).json({
+        message: "You have provided an incorrect email address and or password",
+      });
       return;
     }
 
@@ -41,11 +38,9 @@ router.post("/login", async (req, res) => {
     const validPassword = await user.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({
-          message: "you have provided an incorrect email and or password",
-        });
+      res.status(400).json({
+        message: "you have provided an incorrect email and or password",
+      });
       return;
     }
     req.session.save(() => {
@@ -56,5 +51,16 @@ router.post("/login", async (req, res) => {
     });
   } catch (error) {
     res.status(400).json(error);
+  }
+});
+
+//communicating with database if post req for logout -> destroy session
+router.post("/logout", (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
