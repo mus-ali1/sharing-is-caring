@@ -49,3 +49,5 @@ router.delete('/:id', authMiddleware, (req, res) => {
             res.status(500).json(err);
         });
 });
+
+module.exports = router;
