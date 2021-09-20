@@ -4,8 +4,8 @@ const commentRoutes = require("./CommentRoutes");
 const userRoutes = require("./UserRoutes");
 const authMiddleware = require("../../utils/auth");
 
-router.use("/recipe",authMiddleware, recipeRoutes);
-//router.use("/comment", commentRoutes);
+router.use("/recipe", authMiddleware, recipeRoutes);
+router.use("/comment", authMiddleware, commentRoutes);
 router.use("/user", authMiddleware, userRoutes);
 
 router.use("*", (req, res) => {
