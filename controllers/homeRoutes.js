@@ -28,10 +28,10 @@ router.get("/", (req, res) => {
             },
         ],
     })
-        .then((recipesData) => {
-            const recipes = recipesData.map((post) => post.get({ plain: true }));
+        .then((recipeData) => {
+            const recipe = recipeData.map((post) => post.get({ plain: true }));
             res.render("homepage", {
-                recipes,
+                recipe,
                 loggedIn: req.session.loggedIn,
             });
         })
@@ -56,4 +56,55 @@ router.get("/signup", (req, res) => {
     }
     // else login
     res.render("signup");
+});
+
+router.get("/recipe/:id", (req, res) => {
+    console.log(req.session, "recipe testing");
+    Recipe.findOne({
+        where: {
+            id: req.params.id,
+        },
+        attributes: [
+            "id",
+            "recipe_name",
+            "recipe_nationality",
+            "upvote",
+            "downvote"
+        ],
+        include: [
+            {
+                model: Comment,
+                attributes: ["id", "user_id", "recipe_id", "comment", "upvote", "downvote"],
+                include: {
+                    model: User,
+                    attributes: ["username"],
+                },
+            },
+            {
+                model: User,
+                attributes: ["username"],
+            },
+        ],
+    })
+        .then((recipeData) => {
+            if (!recipeData) {
+                res.status(404).json({ message: "No recipe found with this id" });
+                return;
+            }
+
+            // serialize the data
+            const recipe = recipeData.get({ plain: true });
+
+            // pass data to template
+            console.log(recipe);
+            console.log(recipe.user.username);
+            res.render("single-recipe", {
+                recipe,
+                loggedIn: req.session.loggedIn,
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
