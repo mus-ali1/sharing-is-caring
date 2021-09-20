@@ -40,3 +40,20 @@ router.get("/", (req, res) => {
             res.status(500).json(err);
         });
 });
+
+router.get("/login", (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect("/");
+        return;
+    }
+    // else login
+    res.render("login");
+});
+router.get("/signup", (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect("/");
+        return;
+    }
+    // else login
+    res.render("signup");
+});
