@@ -6,9 +6,10 @@ const authMiddleware = require("../../utils/auth");
 
 router.use("/recipe", authMiddleware, recipeRoutes);
 router.use("/comment", authMiddleware, commentRoutes);
-router.use("/user", authMiddleware, userRoutes);
+router.use("/user", userRoutes);
 
 router.use("*", (req, res) => {
+  console.log(req.originalUrl)
   res.status(404).end();
 });
 

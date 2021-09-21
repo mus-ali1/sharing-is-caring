@@ -13,14 +13,28 @@ router.get('/', (req, res) => {
         });
 });
 
+// get comment by id
+router.get("/:commentId", async (req, res) => {
+    const comment = await Comment.findByPk(req.params.commentId);
+
+    if (comment) {
+        return res.json(comment);
+    } else {
+        return res.status(404).end();
+    }
+});
+
 // comment created
 router.post("/", authMiddleware, async (req, res) => {
     // check the session
     if (req.session) {
         await Comment.create({
-            comment: req.body.comment_text,
+            comment: req.body.comment,
             // use the id from the session
             user_id: req.session.user_id,
+            recipe_id: req.body.recipe_id,
+            downvote: 0,
+            upvote: 0
         })
             .then((dbCommentData) => res.json(dbCommentData))
             .catch((err) => {
