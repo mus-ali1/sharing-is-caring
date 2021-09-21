@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// get comment by id
 router.get("/:commentId", async (req, res) => {
     const comment = await Comment.findByPk(req.params.commentId);
 
@@ -21,7 +22,7 @@ router.get("/:commentId", async (req, res) => {
     } else {
         return res.status(404).end();
     }
-})
+});
 
 // comment created
 router.post("/", authMiddleware, async (req, res) => {
