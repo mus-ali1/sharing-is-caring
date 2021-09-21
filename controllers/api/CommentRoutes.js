@@ -13,6 +13,16 @@ router.get('/', (req, res) => {
         });
 });
 
+router.get("/:commentId", async (req, res) => {
+    const comment = await Comment.findByPk(req.params.commentId);
+
+    if (comment) {
+        return res.json(comment);
+    } else {
+        return res.status(404).end();
+    }
+})
+
 // comment created
 router.post("/", authMiddleware, async (req, res) => {
     // check the session
