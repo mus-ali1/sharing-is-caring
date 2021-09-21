@@ -1,0 +1,16 @@
+<div class="image for recipe">
+    <img src="" alt="">
+</div>
+<div class="padding-20">
+    <form id="comment-form " class="padding-20">
+        <label for="comment-title">Post Comment</label>
+        <input class="padding-20" type="textarea" name="comment-title" id="comment-title">
+        <button class="padding-20" id="create-comment-btn">Post!</button>
+    </form>
+</div>
+<script src="/js/create-comment.js"></script>
+<ul>
+    {{#each recipe.Comments}}
+    <li>{{this.comment}}</li>
+    {{/each}}
+</ul>
