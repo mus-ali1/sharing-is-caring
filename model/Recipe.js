@@ -39,6 +39,11 @@ Recipe.init(
       },
     },
 
+    // recipe_instruction: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: false
+    // },
+
     upvote: {
       type: DataTypes.INTEGER,
       allowNull: true,
