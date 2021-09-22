@@ -1,16 +1,20 @@
-<div class="card">
-    <h3 class="card-header">Sign Up</h3>
-    <form id="signup-form" class="card-body">
-        <label for="username-signup" class="form-label">Username</label>
-        <input id="username-signup" type="text" class="form-input" />
+<form class="signup-form">
+    <div>
+        <label for="username-signup">username:</label>
+        <input type="text" id="username-signup" />
+    </div>
+    <div>
+        <label for="email-signup">email:</label>
+        <input type="text" id="email-signup" />
+    </div>
+    <div>
+        <label for="password-signup">password:</label>
+        <input type="password" id="password-signup" />
+    </div>
+    <div>
+        <button type="submit" class="btn">signup</button>
+    </div>
+</form>
 
-
-        <label class="form-label" for="password-signup">Password</label>
-        <input id="password-signup" type="password" class="form-input" />
-
-        <button type="submit" class="btn">Signup!</button>
-        <a class="login-link" href="/login">Log in instead</a>
-    </form>
-</div>
 
 <script src="/javascript/signup.js"></script>
