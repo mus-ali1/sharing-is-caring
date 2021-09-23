@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { User, Recipe, Comment } = require("../model");
+const authMiddleware = require("../utils/auth");
 
 router.get("/", (req, res) => {
     console.log("Its up and running!");
@@ -27,11 +28,13 @@ router.get("/", (req, res) => {
                 attributes: ["username"],
             },
         ],
+        order: [['id', 'DESC']]
     })
         .then((recipeData) => {
-            const recipe = recipeData.map((post) => post.get({ plain: true }));
-            res.render("homepage", {
-                recipe,
+            const recipes = recipeData.map((post) => post.get({ plain: true }));
+            console.log(recipes)
+            res.render("dashboard", {
+                recipes,
                 loggedIn: req.session.loggedIn,
             });
         })
@@ -57,6 +60,13 @@ router.get("/signup", (req, res) => {
     // else login
     res.render("signup");
 });
+
+router.get("/dashboard", authMiddleware, (req, res) => {
+    return res.render("dashboard", {
+
+    })
+})
+
 
 router.get("/recipe/:id", (req, res) => {
     console.log(req.session, "recipe testing");
