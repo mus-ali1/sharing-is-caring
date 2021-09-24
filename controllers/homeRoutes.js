@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 const { User, Recipe, Comment } = require("../model");
 const authMiddleware = require("../utils/auth");
 
-router.get("/", (req, res) => {
+router.get("/", authMiddleware, (req, res) => {
     console.log("Its up and running!");
     console.log(req.session, "homepage render");
     Recipe.findAll({
@@ -61,11 +61,11 @@ router.get("/signup", (req, res) => {
     res.render("signup");
 });
 
-router.get("/dashboard", authMiddleware, (req, res) => {
-    return res.render("dashboard", {
+// router.get("/dashboard", authMiddleware, (req, res) => {
+//     return res.render("dashboard", {
 
-    })
-})
+//     })
+// })
 
 
 router.get("/recipe/:id", (req, res) => {
