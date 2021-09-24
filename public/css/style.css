@@ -1,64 +1,152 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: lightgrey;
-}
+.main-navbar {
 
-li,
-a,
-button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: ghostwhite;
-  text-decoration: none;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "nunito", "sans-serif"; 
+
+
+
+
 }
 
-header {
-  display: flex;
-  /* justify-content: space-between; */
-  justify-content: flex-end;
-  align-items: center;
-  padding: 30px 10%;
-}
-.logo {
-  cursor: pointer;
-  margin-right: auto;
+#button1 {
+
+
+  border:none;
+  padding-top: 10px;
+  padding-bottom:10px;
+  color:wheat;
+  background-color:darkorange;
+  font-weight: bold;
+  width: 200px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.nav_links {
-  list-style: none;
+
+#main-dashboard {
+
+
+  max-width: 300px;
+  margin: auto;
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center;
+  min-height:100vh;
+  background-image:url("../images/background-dashboard.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+
+
+
 }
 
-.nav_links li {
-  display: inline-block;
-  padding: 0px 20px;
-  /* color: black; */
+
+.login-form {
+
+  max-width: 300px;
+  margin: auto;
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center;
+  min-height:100vh;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "nunito", "sans-serif"; 
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.nav_links li a {
-  transition: all 0.3s ease 0s;
-  color: black;
+
+.login-page {
+
+  background-image:url("../images/backgroundForLogin.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
 }
 
-.nav_links li a:hover {
-  color: gold;
+
+#submit-login {
+
+
+margin-top: 10px;
+border:none;
+  padding-top: 10px;
+  padding-bottom:10px;
+  color:white;
+  background-color:darkorange;
+  font-weight: bold;
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  
+
 }
 
-button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  /* background-color: rgba(red, green, blue, alpha); */
-  background-color: rgba(0, 136, 169, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+
+#email-login {
+
+
+margin-right: 100px;
+
+
 }
 
-button:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+
+#password-login {
+
+
+margin-right:100px;
 }
+
+.signup-page {
+
+  background-image:url("../images/background-signUp.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.signup-form {
+
+  max-width: 300px;
+  margin: auto;
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center;
+  min-height:100vh;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "nunito", "sans-serif"; 
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+#submit-signup {
+
+  margin-top: 10px;
+  border:none;
+    padding-top: 10px;
+    padding-bottom:10px;
+    color:white;
+    background-color:darkorange;
+    font-weight: bold;
+    width: 250px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
+  }
