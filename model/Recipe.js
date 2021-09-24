@@ -24,10 +24,20 @@ Recipe.init(
 
     recipe_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [4],
       },
+    },
+
+    ingredients: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
+    cooking_instructions: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
 
     recipe_nationality: {

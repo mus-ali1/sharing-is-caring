@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
 });
 //logging in an existing user so they already have a user name & cridentials
 router.post("/login", async (req, res) => {
+  console.log(req.body);
   try {
     const user = await User.findOne({
       where: {
