@@ -58,7 +58,7 @@ router.get("/signup", (req, res) => {
         return;
     }
     // else login
-    res.render("signup");
+    res.render("signUp");
 });
 
 // router.get("/dashboard", authMiddleware, (req, res) => {
