@@ -50,9 +50,11 @@ This is a collaborative project completed by students who are new to coding and 
 
    - You should see a message that tells you which port your server is operating from e.g. `server listening on port: 3000`
 
-   ## Screen Shots: ... TO BE ADDED
+   ## Screen Shots: 
+   
+   ![Screenshot](./public/images/ScreenshotSharingCaring.png)
 
-   ## Video Tutorial (ScreenCastify): ... TO BE ADDED
+   ## Heroku Link: https://sharing-is-caring-dreamteam.herokuapp.com/login
 
    ## License:
 
@@ -64,9 +66,9 @@ This is a collaborative project completed by students who are new to coding and 
 
    ## Email:
 
-   - Mustafa Ali:
-   - Paul Aston:
-   - Jacqie Williamson jacqieq@me.com
+   - Mustafa Ali:mustafa_a_ali@outlook.com
+   - Paul Aston:p_aston@hotmail.co.uk
+   - Jacqie Williamson: jacqieq@me.com
 
    ## Git Hub:
 
